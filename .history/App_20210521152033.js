@@ -4,6 +4,10 @@ import { Button, Linking, RefreshControl, ScrollView, StyleSheet, Text, View } f
 
 export default function App() {
 
+  let [refreshing, setRefreshing] = useState( false )
+
+  let onFresh 
+
   let [items, setItems] = useState([
     { key: 1, item: 'Item 1' },
     { key: 2, item: 'Item 2' },
@@ -13,28 +17,13 @@ export default function App() {
     { key: 6, item: 'Item 6' },
     { key: 7, item: 'Item 7' },
     { key: 8, item: 'Item 8' },
-    { key: 9, item: 'Item 90' },
+    { key: 9, item: 'Item 910' },
   ])
-
-  let [refreshing, setRefreshing] = useState( false )
-
-  let onRefresh = () => {
-    setRefreshing( true )
-    setItems( [...items, { key:69, item: 'Item 69' } ] )
-    setRefreshing( false )
-  }
-
-  
 
   return (
       <ScrollView
         style={styles.body}
-        refreshControl={
-          <RefreshControl
-            refreshing={ refreshing }
-            onRefresh={ onRefresh }
-            colors={ ['#ff00ff'] }
-          />}
+        refreshControl={<RefreshControl refreshing={ refreshing }/>}
       >
         {items.map(obj => {
           return (

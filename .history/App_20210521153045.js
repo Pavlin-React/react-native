@@ -33,7 +33,7 @@ export default function App() {
           <RefreshControl
             refreshing={ refreshing }
             onRefresh={ onRefresh }
-            colors={ ['#ff00ff'] }
+            colors={ '' }
           />}
       >
         {items.map(obj => {

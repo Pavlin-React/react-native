@@ -13,14 +13,14 @@ export default function App() {
     { key: 6, item: 'Item 6' },
     { key: 7, item: 'Item 7' },
     { key: 8, item: 'Item 8' },
-    { key: 9, item: 'Item 90' },
+    { key: 9, item: 'Item 910' },
   ])
 
   let [refreshing, setRefreshing] = useState( false )
 
-  let onRefresh = () => {
+  let onFresh = () => {
     setRefreshing( true )
-    setItems( [...items, { key:69, item: 'Item 69' } ] )
+    setItems( [...Items, { key:69, item: 'Item 69' } ] )
     setRefreshing( false )
   }
 
@@ -32,8 +32,7 @@ export default function App() {
         refreshControl={
           <RefreshControl
             refreshing={ refreshing }
-            onRefresh={ onRefresh }
-            colors={ ['#ff00ff'] }
+            onRefresh={  }
           />}
       >
         {items.map(obj => {
