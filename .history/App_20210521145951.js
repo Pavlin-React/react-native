@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Button, Linking, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { Button, Linking, StyleSheet, Text, View } from 'react-native';
 
 export default function App() {
 
@@ -12,21 +12,18 @@ export default function App() {
     { key: 5, item: 'Item 5' },
     { key: 6, item: 'Item 6' },
     { key: 7, item: 'Item 7' },
-    { key: 8, item: 'Item 8' },
-    { key: 9, item: 'Item 9' },
+    { key: 8, item: 'Item 8' }
   ])
 
   return (
     <View style={styles.body}>
-      <ScrollView>
-        {items.map(obj => {
-          return (
-            <View key={obj.key}style={ styles.item }>
-              <Text style={ styles.text }>{ obj.item }</Text>
-            </View>
-          )
-        })}
-      </ScrollView>
+      {items.map(obj => {
+        return (
+          <View key={obj.key}style={ styles.item }>
+            <Text style={ styles.text }>{ obj.item }</Text>
+          </View>
+        )
+      })}
     </View>
   );
 }
@@ -36,7 +33,7 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'column',
     backgroundColor: '#ffffff',
-    marginTop: 40,
+    margi
   },
   item: {
     margin: 10,
@@ -47,7 +44,8 @@ const styles = StyleSheet.create({
   text: {
     margin: 10,
     color: '#000000',
-    fontSize: 45,
+    fontSize: 35,
     fontStyle: 'italic',
+    margin: 10,
   },
 });

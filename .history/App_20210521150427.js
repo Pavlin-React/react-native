@@ -13,7 +13,7 @@ export default function App() {
     { key: 6, item: 'Item 6' },
     { key: 7, item: 'Item 7' },
     { key: 8, item: 'Item 8' },
-    { key: 9, item: 'Item 9' },
+    { key: 8, item: 'Item 9' },
   ])
 
   return (
