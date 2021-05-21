@@ -56,11 +56,13 @@ export default function App() {
       keyExtractor={ ( item, index ) => index.toString() }
       sections={ DATA }
       renderItem={ ( { item } ) => (
-        <Text style={styles.text}>{item}</Text>
+        <View key={item.key} style={styles.item}>
+          <Text style={styles.text}>{item}</Text>
+        </View>
       ) }
       renderSectionHeader={ ( { section } ) => (
         <View key={section.key} style={styles.item}>
-          <Text style={styles.text}>{section.title}</Text>
+          
         </View>
       ) }
     />

@@ -55,13 +55,10 @@ export default function App() {
     <SectionList
       keyExtractor={ ( item, index ) => index.toString() }
       sections={ DATA }
-      renderItem={ ( { item } ) => (
-        <Text style={styles.text}>{item}</Text>
-      ) }
-      renderSectionHeader={ ( { section } ) => (
-        <View key={section.key} style={styles.item}>
-          <Text style={styles.text}>{section.title}</Text>
-        </View>
+      renderItem{ ( { item } ) => (
+        <View key={item.key} style={styles.item}>
+           <Text style={styles.text}>{item.name}</Text>
+      </View>
       ) }
     />
     // <FlatList
