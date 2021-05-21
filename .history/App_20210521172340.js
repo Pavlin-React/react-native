@@ -27,7 +27,7 @@ export default function App() {
 
   let onRefresh = () => {
     setRefreshing(true);
-    setItems([...items, { name: "Item 63" }]);
+    setItems([...items, { key: 69, item: "Item 63" }]);
     setRefreshing(false);
   };
 
