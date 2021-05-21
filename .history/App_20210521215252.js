@@ -14,13 +14,11 @@ import {
       <View style={ styles.body }>
         <Text style={ styles.text }>Enter your name: </Text>
         <TextInput
-          
           style={ styles.input }
           placeholder='e.g. John'
           onChangeText={ ( value ) => SetName( value ) }
-          keyboardType='email-address'
+          <Text>Your new name is {  } </Text>
         />
-        <Text style={ styles.text }>Your name is { name }</Text>
         
       </View>
     );

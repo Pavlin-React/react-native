@@ -18,7 +18,7 @@ import {
           style={ styles.input }
           placeholder='e.g. John'
           onChangeText={ ( value ) => SetName( value ) }
-          keyboardType='email-address'
+          keyboardType=''
         />
         <Text style={ styles.text }>Your name is { name }</Text>
         
