@@ -82,7 +82,7 @@ import {
 const styles = StyleSheet.create({
   body: {
     flex: 1,
-    backgroundColor: "coral",
+    backgroundColor: "#ffffff",
     alignItems: 'center',
     marginTop: 40,
   },

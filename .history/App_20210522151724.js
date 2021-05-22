@@ -33,7 +33,6 @@ import {
           onRequestClose={ () => {
             SetShowWarning( false )
           } }
-          animationType= 'slide'
         >
           <View style={ styles.centered_view }>
             <View style={ styles.modal_warning }>
@@ -45,8 +44,7 @@ import {
               </View>
               <Pressable
                 style={ styles.warning_pressable }
-                onPress={ () => SetShowWarning( false ) }
-                
+                onPress={ () =>  }  
               >
                 <Text style={ styles.text }>Ok</Text>
               </Pressable>
@@ -66,8 +64,10 @@ import {
           color= '#00f'
         /> */}
         <TouchableHighlight
+        activeOpacity={ 0.2 }
           onPress={ onClickHandler }
           style={ styles.button }
+          underlayColor= 'green'
         >
           <Text style={ styles.text }>{ submit ? 'clear' : 'submit' }</Text>
         </TouchableHighlight>
@@ -82,7 +82,7 @@ import {
 const styles = StyleSheet.create({
   body: {
     flex: 1,
-    backgroundColor: "coral",
+    backgroundColor: "#ffffff",
     alignItems: 'center',
     marginTop: 40,
   },
@@ -123,7 +123,7 @@ const styles = StyleSheet.create({
   warning_title: {
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'red',
+    backgroundColor: 'gold',
     height: 50,
     borderTopRightRadius: 20,
     borderTopLeftRadius: 20,
@@ -133,7 +133,6 @@ const styles = StyleSheet.create({
     height: 200,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'yellow'
   },
   warning_pressable: {
     height: 50,

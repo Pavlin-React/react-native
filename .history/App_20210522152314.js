@@ -66,6 +66,7 @@ import {
           color= '#00f'
         /> */}
         <TouchableHighlight
+        activeOpacity={ 0.2 }
           onPress={ onClickHandler }
           style={ styles.button }
         >
@@ -82,7 +83,7 @@ import {
 const styles = StyleSheet.create({
   body: {
     flex: 1,
-    backgroundColor: "coral",
+    backgroundColor: "#ffffff",
     alignItems: 'center',
     marginTop: 40,
   },

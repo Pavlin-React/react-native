@@ -82,13 +82,12 @@ import {
 const styles = StyleSheet.create({
   body: {
     flex: 1,
-    backgroundColor: "coral",
+    backgroundColor: "#ffffff",
     alignItems: 'center',
     marginTop: 40,
   },
   text: {
     margin: 10,
-    color: "#000000",
     fontSize: 20,
     fontStyle: "italic",
     textAlign: 'center',
