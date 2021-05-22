@@ -20,9 +20,9 @@ import {
       } else {
         Alert.alert('Warning', 'name must be at least 3 symbols', [
           { text: 'do not show again', onPress: () =>  console.warn( 'do not show again' ) },
-          { text: 'Cancel', onPress: () =>  console.warn( 'Cancel' ) },
+          { text: 'Cancel', onPress: () =>  console.warn( 'Ok Pressed' ) },
           { text: 'OK', onPress: () =>  console.warn( 'Ok Pressed' ) },
-        ], {cancelable: true}, onDismiss= () => console.warn('Alert Dismissed'))
+        ])
       }
     }
 

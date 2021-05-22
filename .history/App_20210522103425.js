@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import {
-  Alert,
   Button,
   StyleSheet,
   Text,
@@ -15,15 +14,7 @@ import {
     let [name, SetName] = useState( '' )
     let [submit, SetSubmit] = useState( false ) 
     let onClickHandler = () => {
-      if ( name.length > 3 ) {
-        SetSubmit( !submit )
-      } else {
-        Alert.alert('Warning', 'name must be at least 3 symbols', [
-          { text: 'do not show again', onPress: () =>  console.warn( 'do not show again' ) },
-          { text: 'Cancel', onPress: () =>  console.warn( 'Cancel' ) },
-          { text: 'OK', onPress: () =>  console.warn( 'Ok Pressed' ) },
-        ], {cancelable: true}, onDismiss= () => console.warn('Alert Dismissed'))
-      }
+      SetSubmit( !submit )
     }
 
     return (
@@ -44,10 +35,9 @@ import {
         activeOpacity={ 0.2 }
           onPress={ onClickHandler }
           style={ styles.button }
-          underlayColor= 'green'
         >
           <Text style={ styles.text }>{ submit ? 'clear' : 'submit' }</Text>
-        </TouchableHighlight>
+        </>
         { submit && <Text style={ styles.text }>Your name is { name }</Text> }
         
       </View>
