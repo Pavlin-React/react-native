@@ -30,14 +30,9 @@ import {
           title={ submit ? 'Clear' : 'Submit' }
           color= '#00f'
         /> */}
-        <TouchableOpacity
-        activeOpacity={ 0.2 }
-          onPress={ onClickHandler }
-          style={ styles.button }
-        >
-          <Text style={ styles.text }>{ submit ? 'clear' : 'submit' }</Text>
+        <TouchableOpacity>
+          
         </TouchableOpacity>
-        { submit && <Text style={ styles.text }>Your name is { name }</Text> }
         
       </View>
     );
@@ -67,10 +62,4 @@ const styles = StyleSheet.create({
     fontSize: 20,
     marginBottom: 20,
   },
-  button: {
-    backgroundColor: 'aqua',
-    width: 200,
-    alignItems: 'center',
-    borderRadius: 5,
-  }
 });

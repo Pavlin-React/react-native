@@ -31,7 +31,7 @@ import {
           color= '#00f'
         /> */}
         <TouchableOpacity
-        activeOpacity={ 0.2 }
+        activeOpacity=
           onPress={ onClickHandler }
           style={ styles.button }
         >

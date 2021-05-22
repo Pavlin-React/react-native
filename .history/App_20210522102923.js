@@ -31,9 +31,8 @@ import {
           color= '#00f'
         /> */}
         <TouchableOpacity
-        activeOpacity={ 0.2 }
           onPress={ onClickHandler }
-          style={ styles.button }
+          
         >
           <Text style={ styles.text }>{ submit ? 'clear' : 'submit' }</Text>
         </TouchableOpacity>
@@ -67,10 +66,4 @@ const styles = StyleSheet.create({
     fontSize: 20,
     marginBottom: 20,
   },
-  button: {
-    backgroundColor: 'aqua',
-    width: 200,
-    alignItems: 'center',
-    borderRadius: 5,
-  }
 });

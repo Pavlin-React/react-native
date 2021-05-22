@@ -31,7 +31,6 @@ import {
           color= '#00f'
         /> */}
         <TouchableOpacity
-        activeOpacity={ 0.2 }
           onPress={ onClickHandler }
           style={ styles.button }
         >
@@ -67,10 +66,4 @@ const styles = StyleSheet.create({
     fontSize: 20,
     marginBottom: 20,
   },
-  button: {
-    backgroundColor: 'aqua',
-    width: 200,
-    alignItems: 'center',
-    borderRadius: 5,
-  }
 });

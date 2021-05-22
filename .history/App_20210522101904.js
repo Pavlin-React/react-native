@@ -4,7 +4,6 @@ import {
   StyleSheet,
   Text,
   TextInput,
-  TouchableOpacity,
   View,
 } from "react-native";
 
@@ -30,14 +29,7 @@ import {
           title={ submit ? 'Clear' : 'Submit' }
           color= '#00f'
         /> */}
-        <TouchableOpacity
-        activeOpacity={ 0.2 }
-          onPress={ onClickHandler }
-          style={ styles.button }
-        >
-          <Text style={ styles.text }>{ submit ? 'clear' : 'submit' }</Text>
-        </TouchableOpacity>
-        { submit && <Text style={ styles.text }>Your name is { name }</Text> }
+        <TouchableO
         
       </View>
     );
@@ -67,10 +59,4 @@ const styles = StyleSheet.create({
     fontSize: 20,
     marginBottom: 20,
   },
-  button: {
-    backgroundColor: 'aqua',
-    width: 200,
-    alignItems: 'center',
-    borderRadius: 5,
-  }
 });
