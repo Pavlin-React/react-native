@@ -24,8 +24,7 @@ import {
         //   { text: 'Cancel', onPress: () =>  console.warn( 'Cancel' ) },
         //   { text: 'OK', onPress: () =>  console.warn( 'Ok Pressed' ) },
         // ], {cancelable: true}, onDismiss= () => console.warn('Alert Dismissed'))
-        ToastAndroid.show('the name must be at least 3 chars',
-        ToastAndroid.LONG)
+        ToastAndroid.show('')
       }
     }
 
