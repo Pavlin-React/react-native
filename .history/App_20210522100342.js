@@ -10,10 +10,6 @@ import {
   const App = () => {
 
     let [name, SetName] = useState( '' )
-    let [submit, SetSubmit] = useState( false ) 
-    let onClickHandler = () => {
-      SetSubmit( !submit )
-    }
 
     return (
       <View style={ styles.body }>
@@ -24,12 +20,8 @@ import {
           placeholder='e.g. John'
           onChangeText={ ( value ) => SetName( value ) }
         />
-        <Button
-          onPress={ onClickHandler }
-          title={ submit ? 'Clear' : 'Submit' }
-          color= '#00f'
-        />
-        { submit && <Text style={ styles.text }>Your name is { name }</Text> }
+        <Button title='Submit'/>
+        <Text style={ styles.text }>Your name is { name }</Text>
         
       </View>
     );

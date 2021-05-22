@@ -26,9 +26,7 @@ import {
         />
         <Button
           onPress={ onClickHandler }
-          title={ submit ? 'Clear' : 'Submit' }
-          color= '#00f'
-        />
+          title={ submit ? Clear }/>
         { submit && <Text style={ styles.text }>Your name is { name }</Text> }
         
       </View>

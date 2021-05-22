@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import {
-  Button,
   StyleSheet,
   Text,
   TextInput,
@@ -10,10 +9,6 @@ import {
   const App = () => {
 
     let [name, SetName] = useState( '' )
-    let [submit, SetSubmit] = useState( false ) 
-    let onClickHandler = () => {
-      SetSubmit( !submit )
-    }
 
     return (
       <View style={ styles.body }>
@@ -23,13 +18,10 @@ import {
           style={ styles.input }
           placeholder='e.g. John'
           onChangeText={ ( value ) => SetName( value ) }
+          keyboardType='email-address'
+          secureTextEntry
         />
-        <Button
-          onPress={ onClickHandler }
-          title={ submit ? 'Clear' : 'Submit' }
-          color= '#00f'
-        />
-        { submit && <Text style={ styles.text }>Your name is { name }</Text> }
+        <Text style={ styles.text }>Your name is { name }</Text>
         
       </View>
     );
@@ -57,6 +49,5 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     textAlign: 'center',
     fontSize: 20,
-    marginBottom: 20,
   },
 });

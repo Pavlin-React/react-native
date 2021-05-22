@@ -12,7 +12,7 @@ import {
     let [name, SetName] = useState( '' )
     let [submit, SetSubmit] = useState( false ) 
     let onClickHandler = () => {
-      SetSubmit( !submit )
+      SetSubmit(  )
     }
 
     return (
@@ -26,10 +26,8 @@ import {
         />
         <Button
           onPress={ onClickHandler }
-          title={ submit ? 'Clear' : 'Submit' }
-          color= '#00f'
-        />
-        { submit && <Text style={ styles.text }>Your name is { name }</Text> }
+          title='Submit'/>
+        <Text style={ styles.text }>Your name is { name }</Text>
         
       </View>
     );
