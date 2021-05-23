@@ -14,7 +14,6 @@ import {
   Image,
   ImageBackground,
 } from "react-native";
-import MashButton from "./CustomButton";
 
   const App = () => {
 
@@ -65,7 +64,7 @@ import MashButton from "./CustomButton";
           placeholder='e.g. John'
           onChangeText={ ( value ) => SetName( value ) }
         />
-        <MashButton onClickHandler={ onClickHandler } title={ submit ? 'Clear' : 'Submit' }/>
+        
         {
           submit ?
         

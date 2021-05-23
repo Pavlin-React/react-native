@@ -65,7 +65,7 @@ import MashButton from "./CustomButton";
           placeholder='e.g. John'
           onChangeText={ ( value ) => SetName( value ) }
         />
-        <MashButton onClickHandler={ onClickHandler } title={ submit ? 'Clear' : 'Submit' }/>
+        <MashButton onClickHandler={ onClickHandler } title={ submit }/>
         {
           submit ?
         

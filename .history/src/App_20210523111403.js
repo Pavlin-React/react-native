@@ -14,7 +14,7 @@ import {
   Image,
   ImageBackground,
 } from "react-native";
-import MashButton from "./CustomButton";
+import MashButton from "../CustomButton";
 
   const App = () => {
 
