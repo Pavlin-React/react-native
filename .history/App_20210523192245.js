@@ -55,11 +55,7 @@ function App() {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator
-        screenOptions={ {
-            header: () => null
-          } }
-      >
+      <Stack.Navigator>
         <Stack.Screen
           name='Screen_A'
           component={ ScreenA }

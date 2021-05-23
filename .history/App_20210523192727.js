@@ -54,12 +54,9 @@ function ScreenB( { navigation } ) {
 function App() {
 
   return (
-    <NavigationContainer>
-      <Stack.Navigator
-        screenOptions={ {
-            header: () => null
-          } }
-      >
+    <NavigationContaine
+    >
+      <Stack.Navigator>
         <Stack.Screen
           name='Screen_A'
           component={ ScreenA }
@@ -69,7 +66,7 @@ function App() {
           component={ ScreenB }
         />
       </Stack.Navigator>
-    </NavigationContainer>
+    </NavigationContaine>
   )
 }
 export default App;

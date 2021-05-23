@@ -28,11 +28,9 @@ function ScreenA( { navigation } ) {
   )
 }
 
-function ScreenB( { navigation } ) {
+function ScreenB() {
 
-  let onPressHandler = () => {
-    navigation.navigate( 'Screen_A' )
-  }
+  
 
   return (
     <View style={ styles.body }>
@@ -55,11 +53,7 @@ function App() {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator
-        screenOptions={ {
-            header: () => null
-          } }
-      >
+      <Stack.Navigator>
         <Stack.Screen
           name='Screen_A'
           component={ ScreenA }

@@ -7,8 +7,8 @@ const Stack = createStackNavigator();
 
 function ScreenA( { navigation } ) {
 
-  let onPressHandler = () => {
-    navigation.navigate( 'Screen_B' )
+  onPressHandler = () => {
+    navigation
   }
 
   return (
@@ -28,25 +28,12 @@ function ScreenA( { navigation } ) {
   )
 }
 
-function ScreenB( { navigation } ) {
-
-  let onPressHandler = () => {
-    navigation.navigate( 'Screen_A' )
-  }
-
+function ScreenB() {
   return (
     <View style={ styles.body }>
       <Text style={ styles.text }>
         Screen B
       </Text>
-      <Pressable
-        onPress={ onPressHandler }
-        style={ ( { pressed } ) => ( { backgroundColor: pressed ? '#ddd' : '#0f0' } ) }
-      >
-        <Text style={ styles.text }>
-          Go to screen A
-        </Text>
-      </Pressable>
   </View>
   )}
 
@@ -55,11 +42,7 @@ function App() {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator
-        screenOptions={ {
-            header: () => null
-          } }
-      >
+      <Stack.Navigator>
         <Stack.Screen
           name='Screen_A'
           component={ ScreenA }

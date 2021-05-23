@@ -56,9 +56,7 @@ function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        screenOptions={ {
-            header: () => null
-          } }
+      
       >
         <Stack.Screen
           name='Screen_A'
