@@ -12,7 +12,6 @@ import {
   TouchableOpacity,
   View,
   Image,
-  ImageBackground,
 } from "react-native";
 
   const App = () => {
@@ -29,11 +28,7 @@ import {
     }
 
     return (
-      <ImageBackground
-      style={ styles.body }
-      source={ require( './assets/black.jpg' ) }
-      resizeMode='stretch'
-      >
+      <View style={ styles.body }>
         <Modal
           visible={ showWarning }
           onRequestClose={ () => {
@@ -92,11 +87,12 @@ import {
               style={ styles.image }
               source={ require('./assets/help.png') }
               resizeMode='stretch'
+              blurRadius={ 4 }
             />
             
         }
         
-      </ImageBackground>
+      </View>
     );
   }
    
@@ -105,6 +101,7 @@ import {
 const styles = StyleSheet.create({
   body: {
     flex: 1,
+    backgroundColor: "coral",
     alignItems: 'center',
     marginTop: 40,
   },

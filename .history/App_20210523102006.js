@@ -30,9 +30,9 @@ import {
 
     return (
       <ImageBackground
-      style={ styles.body }
-      source={ require( './assets/black.jpg' ) }
-      resizeMode='stretch'
+        style={ styles.body }
+        source={ require( './assets/lime.jpg' ) }
+        resizeMode='stretch'
       >
         <Modal
           visible={ showWarning }
@@ -105,6 +105,7 @@ import {
 const styles = StyleSheet.create({
   body: {
     flex: 1,
+    backgroundColor: "coral",
     alignItems: 'center',
     marginTop: 40,
   },

@@ -12,7 +12,7 @@ import {
   TouchableOpacity,
   View,
   Image,
-  ImageBackground,
+  ImageB
 } from "react-native";
 
   const App = () => {
@@ -29,11 +29,7 @@ import {
     }
 
     return (
-      <ImageBackground
-      style={ styles.body }
-      source={ require( './assets/black.jpg' ) }
-      resizeMode='stretch'
-      >
+      <ImageBackground style={ styles.body }>
         <Modal
           visible={ showWarning }
           onRequestClose={ () => {
@@ -105,6 +101,7 @@ import {
 const styles = StyleSheet.create({
   body: {
     flex: 1,
+    backgroundColor: "coral",
     alignItems: 'center',
     marginTop: 40,
   },

@@ -105,6 +105,7 @@ import {
 const styles = StyleSheet.create({
   body: {
     flex: 1,
+    backgroundColor: "coral",
     alignItems: 'center',
     marginTop: 40,
   },

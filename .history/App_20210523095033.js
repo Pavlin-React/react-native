@@ -12,7 +12,6 @@ import {
   TouchableOpacity,
   View,
   Image,
-  ImageBackground,
 } from "react-native";
 
   const App = () => {
@@ -29,11 +28,7 @@ import {
     }
 
     return (
-      <ImageBackground
-      style={ styles.body }
-      source={ require( './assets/black.jpg' ) }
-      resizeMode='stretch'
-      >
+      <View style={ styles.body }>
         <Modal
           visible={ showWarning }
           onRequestClose={ () => {
@@ -60,10 +55,16 @@ import {
         </Modal>
         <Text style={ styles.text }>Enter your name: </Text>
         <TextInput
+          
           style={ styles.input }
           placeholder='e.g. John'
           onChangeText={ ( value ) => SetName( value ) }
         />
+        {/* <Button
+          onPress={ onClickHandler }
+          title={ submit ? 'Clear' : 'Submit' }
+          color= '#00f'
+        /> */}
         <Pressable
           onPress={ onClickHandler }
           hitSlop={ { top: 10, bottom: 10, left: 10, right: 10 } }
@@ -77,7 +78,7 @@ import {
         {
           submit ?
         
-            <View style={ styles.body }>
+            <View>
               <Text style={ styles.text }>
                 Your sre sign in as { name }
               </Text>
@@ -91,12 +92,12 @@ import {
             <Image
               style={ styles.image }
               source={ require('./assets/help.png') }
-              resizeMode='stretch'
+              resizeMode='repeat'
             />
             
         }
         
-      </ImageBackground>
+      </View>
     );
   }
    
@@ -105,6 +106,7 @@ import {
 const styles = StyleSheet.create({
   body: {
     flex: 1,
+    backgroundColor: "coral",
     alignItems: 'center',
     marginTop: 40,
   },
@@ -164,8 +166,8 @@ const styles = StyleSheet.create({
     borderBottomLeftRadius: 20,
   },
   image: {
-    width: 90,
-    height: 90,
-    margin: 10,
+    width: 100,
+    height: 100,
+    marginTop: 20,
   }
 });

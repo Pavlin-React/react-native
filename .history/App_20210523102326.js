@@ -31,7 +31,8 @@ import {
     return (
       <ImageBackground
       style={ styles.body }
-      source={ require( './assets/black.jpg' ) }
+      source={ require( './assets/lime.jpg' ) }
+      source={ require( './assets/check.png' ) }
       resizeMode='stretch'
       >
         <Modal
@@ -105,6 +106,7 @@ import {
 const styles = StyleSheet.create({
   body: {
     flex: 1,
+    backgroundColor: "coral",
     alignItems: 'center',
     marginTop: 40,
   },

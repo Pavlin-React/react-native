@@ -31,8 +31,7 @@ import {
     return (
       <ImageBackground
       style={ styles.body }
-      source={ require( './assets/black.jpg' ) }
-      resizeMode='stretch'
+      source={ require( './assets/.jpg' ) }
       >
         <Modal
           visible={ showWarning }
