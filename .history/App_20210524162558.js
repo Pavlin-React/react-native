@@ -3,6 +3,7 @@ import { Pressable, StyleSheet, Text, View} from "react-native";
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from "@react-navigation/native"
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5'
+import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 
 const Tab = createMaterialTopTabNavigator();
@@ -92,7 +93,7 @@ function App() {
           inactiveTintColor: '#555',
           activeBackgroundColor: '#fff',
           inactiveBackgroundColor: '#999',
-          showLabel: true,
+          // showLabel: false,
         } }
 
         activeColor= '#f0edf6'

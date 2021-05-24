@@ -92,7 +92,7 @@ function App() {
           inactiveTintColor: '#555',
           activeBackgroundColor: '#fff',
           inactiveBackgroundColor: '#999',
-          showLabel: true,
+          showLabel: false,
         } }
 
         activeColor= '#f0edf6'

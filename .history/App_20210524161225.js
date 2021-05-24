@@ -1,16 +1,15 @@
 import React from "react";
 import { Pressable, StyleSheet, Text, View} from "react-native";
 import { createStackNavigator } from '@react-navigation/stack';
-import { NavigationContainer } from "@react-navigation/native"
+import { NavigationContainer } from "@react-navigation/native";
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5'
-import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
-
-const Tab = createMaterialTopTabNavigator();
+import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 
 
 // const Tab = createBottomTabNavigator();
 
-// const Tab = createMaterialBottomTabNavigator();
+const Tab = createMaterialBottomTabNavigator();
 
 const Stack = createStackNavigator();
 
@@ -71,7 +70,7 @@ function App() {
             if ( route.name === 'Screen_A' ) {
               iconName = 'autoprefixer'
               size = focused ? 25 : 20
-              // color = focused ? '#f0f' : '#555'
+              color = focused ? '#f0f' : '#555'
             } else if ( route.name === 'Screen_B' ) {
               iconName = 'btc'
               size = focused ? 25 : 20
@@ -92,12 +91,8 @@ function App() {
           inactiveTintColor: '#555',
           activeBackgroundColor: '#fff',
           inactiveBackgroundColor: '#999',
-          showLabel: true,
+          // showLabel: false,
         } }
-
-        activeColor= '#f0edf6'
-        inactiveColor= '#3e2465'
-        barStyle={ { backgroundColor: '#694fad' } }
 
       >
         <Tab.Screen

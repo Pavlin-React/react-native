@@ -1,16 +1,11 @@
 import React from "react";
 import { Pressable, StyleSheet, Text, View} from "react-native";
 import { createStackNavigator } from '@react-navigation/stack';
-import { NavigationContainer } from "@react-navigation/native"
-import FontAwesome5 from 'react-native-vector-icons/FontAwesome5'
-import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
+import { NavigationContainer } from "@react-navigation/native";
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import FontAwesome5 from ''
 
-const Tab = createMaterialTopTabNavigator();
-
-
-// const Tab = createBottomTabNavigator();
-
-// const Tab = createMaterialBottomTabNavigator();
+const Tab = createBottomTabNavigator();
 
 const Stack = createStackNavigator();
 
@@ -65,50 +60,24 @@ function App() {
   return (
     <NavigationContainer>
       <Tab.Navigator
-        screenOptions={ ( { route } ) => ( {
+        screenOptions={ ( { route } ) => {
           tabBarIcon: ( { focused, size, color } ) => {
             let iconName
-            if ( route.name === 'Screen_A' ) {
+            if ( route.name === ScreenA ) {
               iconName = 'autoprefixer'
-              size = focused ? 25 : 20
-              // color = focused ? '#f0f' : '#555'
-            } else if ( route.name === 'Screen_B' ) {
-              iconName = 'btc'
-              size = focused ? 25 : 20
-              // color = focused ? '#f0f' : '#555'
+            } else if ( route.name === ScreenB ) {
+              iconName = 'bitcoin'
             }
-            return(
-              <FontAwesome5
-              name={ iconName }
-              size = { size }
-              color = { color }
-            />
-            )
           }
-        } ) }
-
-        tapBarOptions={ {
-          activeTintColor: '#f0f',
-          inactiveTintColor: '#555',
-          activeBackgroundColor: '#fff',
-          inactiveBackgroundColor: '#999',
-          showLabel: true,
         } }
-
-        activeColor= '#f0edf6'
-        inactiveColor= '#3e2465'
-        barStyle={ { backgroundColor: '#694fad' } }
-
       >
         <Tab.Screen
           name='Screen_A'
           component={ ScreenA }
-          options={ { tabBarBadge: 3 } }
         />
         <Tab.Screen
           name='Screen_B'
           component={ ScreenB }
-          options={ { tabBarBadge: 1 } }
         />
       </Tab.Navigator>
     </NavigationContainer>
