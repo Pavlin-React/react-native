@@ -22,7 +22,7 @@ function ScreenA( { navigation } ) {
 
   let onPressHandler = () => {
     // navigation.navigate( 'Screen_B' )
-    navigation.toggleDrawer()
+    navigation.openDrawer()
   }
 
   return (
@@ -58,7 +58,7 @@ function ScreenB( { navigation } ) {
         style={ ( { pressed } ) => ( { backgroundColor: pressed ? '#ddd' : '#0f0' } ) }
       >
         <Text style={ styles.text }>
-          Toggle Drawer
+          
         </Text>
       </Pressable>
   </View>

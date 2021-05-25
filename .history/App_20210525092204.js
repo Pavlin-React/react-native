@@ -22,7 +22,7 @@ function ScreenA( { navigation } ) {
 
   let onPressHandler = () => {
     // navigation.navigate( 'Screen_B' )
-    navigation.toggleDrawer()
+    navigation.openDrawer()
   }
 
   return (

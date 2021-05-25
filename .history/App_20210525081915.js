@@ -21,8 +21,7 @@ const Drawer = createDrawerNavigator();
 function ScreenA( { navigation } ) {
 
   let onPressHandler = () => {
-    // navigation.navigate( 'Screen_B' )
-    navigation.toggleDrawer()
+    navigation.navigate( 'Screen_B' )
   }
 
   return (
@@ -51,14 +50,14 @@ function ScreenB( { navigation } ) {
   return (
     <View style={ styles.body }>
       <Text style={ styles.text }>
-        Section A
+        Screen B
       </Text>
       <Pressable
         onPress={ onPressHandler }
         style={ ( { pressed } ) => ( { backgroundColor: pressed ? '#ddd' : '#0f0' } ) }
       >
         <Text style={ styles.text }>
-          Toggle Drawer
+          Go to screen A
         </Text>
       </Pressable>
   </View>
@@ -70,49 +69,17 @@ function App() {
   return (
     <NavigationContainer>
       <Drawer.Navigator
-        initialRouteName='Screen_B'
-        drawerPosition='left'
-        edgeWidth={ 500 }
-        overlayColor='darkgrey'
-        drawerStyle={{
-          backgroundColor: 'aqua',
-          width: 300,
-        }}
-        screenOptions={{
-          headerShown: true,
-          headerTitleAlign: 'center',
-          headerStyle: {
-            backgroundColor: 'darkcyan'
-          }
-        }}
+        
       >
         <Drawer.Screen
           name='Screen_A'
           component={ ScreenA }
-          options={ {
-            title: 'Toggle Drawer',
-            drawerIcon: ( { focused } ) => (
-              <FontAwesome5
-                name='btc'
-                size= { focused ? 25 : 20 }
-                color= { focused ? 'blue' : 'darkkhaki' }
-              />
-            )
-          } }
+          options={ { tabBarBadge: 3 } }
         />
         <Drawer.Screen
           name='Screen_B'
           component={ ScreenB }
-          options={ {
-            title: 'Section B',
-            drawerIcon: ( { focused } ) => (
-              <FontAwesome5
-                name='btc'
-                size= { focused ? 25 : 20 }
-                color= { focused ? 'blue' : 'darkkhaki' }
-              />
-            )
-          } }
+          options={ { tabBarBadge: 1 } }
         />
       </Drawer.Navigator>
     </NavigationContainer>

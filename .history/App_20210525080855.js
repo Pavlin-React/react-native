@@ -7,8 +7,6 @@ import { createMaterialTopTabNavigator } from '@react-navigation/material-top-ta
 
 import { createDrawerNavigator } from '@react-navigation/drawer';
 
-const Drawer = createDrawerNavigator();
-
 // const Tab = createMaterialTopTabNavigator();
 
 
@@ -21,8 +19,7 @@ const Drawer = createDrawerNavigator();
 function ScreenA( { navigation } ) {
 
   let onPressHandler = () => {
-    // navigation.navigate( 'Screen_B' )
-    navigation.toggleDrawer()
+    navigation.navigate( 'Screen_B' )
   }
 
   return (
@@ -51,14 +48,14 @@ function ScreenB( { navigation } ) {
   return (
     <View style={ styles.body }>
       <Text style={ styles.text }>
-        Section A
+        Screen B
       </Text>
       <Pressable
         onPress={ onPressHandler }
         style={ ( { pressed } ) => ( { backgroundColor: pressed ? '#ddd' : '#0f0' } ) }
       >
         <Text style={ styles.text }>
-          Toggle Drawer
+          Go to screen A
         </Text>
       </Pressable>
   </View>
@@ -70,51 +67,52 @@ function App() {
   return (
     <NavigationContainer>
       <Drawer.Navigator
-        initialRouteName='Screen_B'
-        drawerPosition='left'
-        edgeWidth={ 500 }
-        overlayColor='darkgrey'
-        drawerStyle={{
-          backgroundColor: 'aqua',
-          width: 300,
-        }}
-        screenOptions={{
-          headerShown: true,
-          headerTitleAlign: 'center',
-          headerStyle: {
-            backgroundColor: 'darkcyan'
+        screenOptions={ ( { route } ) => ( {
+          tabBarIcon: ( { focused, size, color } ) => {
+            let iconName
+            if ( route.name === 'Screen_A' ) {
+              iconName = 'autoprefixer'
+              size = focused ? 25 : 20
+              // color = focused ? '#f0f' : '#555'
+            } else if ( route.name === 'Screen_B' ) {
+              iconName = 'btc'
+              size = focused ? 25 : 20
+              // color = focused ? '#f0f' : '#555'
+            }
+            return(
+              <FontAwesome5
+              name={ iconName }
+              size = { size }
+              color = { color }
+            />
+            )
           }
-        }}
+        } ) }
+
+        tapBarOptions={ {
+          activeTintColor: '#f0f',
+          inactiveTintColor: '#555',
+          activeBackgroundColor: '#fff',
+          inactiveBackgroundColor: '#999',
+          showLabel: true,
+        } }
+
+        activeColor= '#f0edf6'
+        inactiveColor= '#3e2465'
+        barStyle={ { backgroundColor: '#694fad' } }
+
       >
-        <Drawer.Screen
+        <Tab.Screen
           name='Screen_A'
           component={ ScreenA }
-          options={ {
-            title: 'Toggle Drawer',
-            drawerIcon: ( { focused } ) => (
-              <FontAwesome5
-                name='btc'
-                size= { focused ? 25 : 20 }
-                color= { focused ? 'blue' : 'darkkhaki' }
-              />
-            )
-          } }
+          options={ { tabBarBadge: 3 } }
         />
-        <Drawer.Screen
+        <Tab.Screen
           name='Screen_B'
           component={ ScreenB }
-          options={ {
-            title: 'Section B',
-            drawerIcon: ( { focused } ) => (
-              <FontAwesome5
-                name='btc'
-                size= { focused ? 25 : 20 }
-                color= { focused ? 'blue' : 'darkkhaki' }
-              />
-            )
-          } }
+          options={ { tabBarBadge: 1 } }
         />
-      </Drawer.Navigator>
+      </.Navigator>
     </NavigationContainer>
   )
 }

@@ -22,7 +22,7 @@ function ScreenA( { navigation } ) {
 
   let onPressHandler = () => {
     // navigation.navigate( 'Screen_B' )
-    navigation.toggleDrawer()
+    navigation.openDrawer()
   }
 
   return (
@@ -51,7 +51,7 @@ function ScreenB( { navigation } ) {
   return (
     <View style={ styles.body }>
       <Text style={ styles.text }>
-        Section A
+        Section AAA
       </Text>
       <Pressable
         onPress={ onPressHandler }

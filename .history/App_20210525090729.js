@@ -21,8 +21,7 @@ const Drawer = createDrawerNavigator();
 function ScreenA( { navigation } ) {
 
   let onPressHandler = () => {
-    // navigation.navigate( 'Screen_B' )
-    navigation.toggleDrawer()
+    navigation.navigate( 'Screen_B' )
   }
 
   return (
@@ -51,14 +50,14 @@ function ScreenB( { navigation } ) {
   return (
     <View style={ styles.body }>
       <Text style={ styles.text }>
-        Section A
+        Screen B
       </Text>
       <Pressable
         onPress={ onPressHandler }
         style={ ( { pressed } ) => ( { backgroundColor: pressed ? '#ddd' : '#0f0' } ) }
       >
         <Text style={ styles.text }>
-          Toggle Drawer
+          Go to screen A
         </Text>
       </Pressable>
   </View>
@@ -79,18 +78,14 @@ function App() {
           width: 300,
         }}
         screenOptions={{
-          headerShown: true,
-          headerTitleAlign: 'center',
-          headerStyle: {
-            backgroundColor: 'darkcyan'
-          }
+          headerShown
         }}
       >
         <Drawer.Screen
           name='Screen_A'
           component={ ScreenA }
           options={ {
-            title: 'Toggle Drawer',
+            title: 'Section A',
             drawerIcon: ( { focused } ) => (
               <FontAwesome5
                 name='btc'
